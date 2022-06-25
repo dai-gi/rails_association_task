@@ -1,0 +1,17 @@
+<%= form_with(model: italian_food, local: true) do |form| %>
+  <% if italian_food.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(italian_food.errors.count, "error") %> prohibited this italian_food from being saved:</h2>
+
+      <ul>
+        <% italian_food.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

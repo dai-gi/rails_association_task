@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Italian Foods</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @italian_foods.each do |italian_food| %>
+      <tr>
+        <td><%= link_to 'Show', italian_food %></td>
+        <td><%= link_to 'Edit', edit_italian_food_path(italian_food) %></td>
+        <td><%= link_to 'Destroy', italian_food, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Italian Food', new_italian_food_path %>

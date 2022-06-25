@@ -1,0 +1,2 @@
+module ChineseFoodsHelper
+end
